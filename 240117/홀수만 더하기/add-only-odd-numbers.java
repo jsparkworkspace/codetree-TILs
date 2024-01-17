@@ -7,7 +7,7 @@ public class Main {
         int oddsum = 0;
         for (int i = 0; i < n; i++) {
             int k = sc.nextInt();
-            if (k % 3 == 0) {
+            if (k % 3 == 0 && k % 2 == 1) {
                 oddsum += k;
             }
         }
