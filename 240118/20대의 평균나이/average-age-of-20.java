@@ -3,7 +3,7 @@ public class Main {
     public static void main(String[] args) {
         // 여기에 코드를 작성해주세요.
         Scanner sc = new Scanner(System.in);
-        int sum = 0;
+        float sum = 0.0f;
         float avg = 0.0f;
         int count = 0;
         for (;;) {
@@ -16,7 +16,7 @@ public class Main {
             count++;
             }
         }
-        avg = ((float) sum) / count;
+        avg = sum / count;
         System.out.printf("%.2f", avg);
         sc.close();
     }
