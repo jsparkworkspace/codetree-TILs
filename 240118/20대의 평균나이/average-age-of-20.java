@@ -9,7 +9,7 @@ public class Main {
         for (;;) {
             int age = sc.nextInt();
 
-            if (age >= 30) {
+            if (age >= 30 || age < 20) {
                 break;
             } else {
             sum += age;
