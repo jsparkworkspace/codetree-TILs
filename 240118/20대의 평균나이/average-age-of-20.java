@@ -11,9 +11,10 @@ public class Main {
 
             if (age >= 30) {
                 break;
-            }
+            } else {
             sum += age;
             count++;
+            }
         }
         avg = ((float) sum) / count;
         System.out.printf("%.2f", avg);
