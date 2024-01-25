@@ -7,9 +7,9 @@ public class Main {
         int b = sc.nextInt();
 
         for (int i = 1; i <= 9; i++) {
-            for (int j = b; j > 0; j -= a) {
-                if (j - a <= 0) {
-                    System.out.printf("%d * %d = %d", j, i, j * i);
+            for (int j = b; j >= a; j -= 2) {
+                if (j == a) {
+                    System.out.printf("%d * %d = %d ", j, i, j * i);
                 } else {
                     System.out.printf("%d * %d = %d / ", j, i, j * i);
                 }
