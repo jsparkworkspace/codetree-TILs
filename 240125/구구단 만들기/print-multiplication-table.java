@@ -8,7 +8,7 @@ public class Main {
 
         for (int i = 1; i <= 9; i++) {
             for (int j = b; j > 0; j -= a) {
-                if (j <= 2) {
+                if (j - a <= 0) {
                     System.out.printf("%d * %d = %d", j, i, j * i);
                 } else {
                     System.out.printf("%d * %d = %d / ", j, i, j * i);
