@@ -10,7 +10,10 @@ public class Main {
         int n = sc.nextInt();
         int cnt = 0;
         while (true) {
-            if (n % 2 == 0) {
+            if (n == 0) {
+                break;
+            }
+            else if (n % 2 == 0) {
                 n /= 2;
                 cnt++;
             } else {
