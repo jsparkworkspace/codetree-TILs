@@ -9,11 +9,9 @@ public class Main {
 
         int n = sc.nextInt();
         int cnt = 0;
-        while (true) {
-            if (n == 0) {
-                break;
-            }
-            else if (n % 2 == 0) {
+        while (n != 1) {
+            
+            if (n % 2 == 0) {
                 n /= 2;
                 cnt++;
             } else {
@@ -21,9 +19,6 @@ public class Main {
                 cnt++;
             }
 
-            if (n == 1) {
-                break;
-            }
         }
             System.out.println(cnt);
         }
