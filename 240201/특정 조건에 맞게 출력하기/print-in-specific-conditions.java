@@ -10,8 +10,11 @@ public class Main {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         String[] arr = br.readLine().split(" "); // String 값을 split으로 나누어 String 배열로 리턴
-
+        int count = 0;
         for (int i = 0; i < arr.length - 1; i++) {
+            if (Integer.parseInt(arr[i]) == 0) count++;
+            if (count == 1) break;
+        
             if (Integer.parseInt(arr[i]) % 2 == 1) {
                 bw.write(Integer.parseInt(arr[i]) + 3 + " ");
             } else {
