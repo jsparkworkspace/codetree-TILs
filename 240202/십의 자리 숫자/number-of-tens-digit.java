@@ -15,7 +15,7 @@ public class Main {
         String[] arr = br.readLine().split(" ");
 
         for (int i = 0; i < arr.length - 1; i++) {
-            
+            if (Integer.parseInt(arr[i]) == 0) break;
             for (int j = 0; j < numCnt.length; j++) {
                 
                if (Integer.parseInt(arr[i]) / 10 == j + 1) {
