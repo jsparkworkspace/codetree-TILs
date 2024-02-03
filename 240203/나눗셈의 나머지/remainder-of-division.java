@@ -8,10 +8,9 @@ public class Main {
         int b = sc.nextInt();
         int[] arr = new int[10];
         int sum = 0;
-        for (;;) {
+        while (a > 1) {
             arr[a % b]++;
             a /= b;
-            if (a <= 1) break;
         }
 
         for (int i = 0; i < arr.length; i++) {
