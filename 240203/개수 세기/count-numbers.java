@@ -1,23 +1,29 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.BufferedWriter;
+import java.io.OutputStreamWriter;
+import java.io.IOException;
+
 public class Main {
     public static void main(String[] args) {
         // 여기에 코드를 작성해주세요.
-        Scanner sc = new Scanner(System.in);
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+             BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out))){
 
-        int n = sc.nextInt();
-        int m = sc.nextInt();
-        int[] arr = new int[n];
+        String[] arr = br.readLine().split(" ");
+        String[] num = br.readLine().split(" ");
         int cnt = 0;
-        for (int i = 0; i < n; i++) {
-            arr[i] = sc.nextInt();
-            if (arr[i] == m) {
+        for (int i = 0; i < num.length; i++) {
+            if (Integer.parseInt(arr[1]) == Integer.parseInt(num[i])) {
                 cnt++;
             }
         }
 
-        System.out.print(cnt);
-        
+        bw.write(cnt + "");
+        bw.flush();
 
-        sc.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }     
     }
 }
