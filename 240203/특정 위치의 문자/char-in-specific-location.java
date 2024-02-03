@@ -5,15 +5,15 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         char[] arr = {'L', 'E', 'B', 'R', 'O', 'S'};
-        
+        boolean b = false;
         char c = sc.next().charAt(0);
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == c) {
+                b = true;
                 System.out.print(i);
-            } else {
-                System.out.print("None");
             }
         }
+        if (b == false) System.out.print("None");
 
         sc.close();
     }
