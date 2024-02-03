@@ -20,13 +20,19 @@ public class Main {
                 System.out.println(num[sc.nextInt() - 1]);
             } else if (qnum == 2) {
                 int nnum = sc.nextInt();
+                boolean b = false;
                 for (int j = 0; j < num.length; j++) {
                     if (nnum == num[j]) {
+                        b = true;
                         System.out.println(j + 1);
                         break;
-                    }
+                    } 
                 }
-            } else {
+                if (b == false) {
+                    System.out.println(0);
+                }
+                
+            } else if (qnum == 3) {
                 int a = sc.nextInt();
                 int b = sc.nextInt();
 
@@ -35,7 +41,7 @@ public class Main {
                 }
                 System.out.println();
 
-            }
+            } 
         } 
 
 
