@@ -12,14 +12,17 @@ public class Main {
 
             int n = Integer.parseInt(br.readLine());
             String[] arr = br.readLine().split(" ");
-            int count = 1;
+            int count = 0;
             int minNo = Integer.parseInt(arr[0]);
             for (int i = 1; i < arr.length; i++) {
                 if(minNo > Integer.parseInt(arr[i])) {
                     minNo = Integer.parseInt(arr[i]);
                 }
-                if (n == Integer.parseInt(arr[i])) {
-                    count = i + 1;
+            }
+
+            for (int i = 0; i < arr.length; i++) {
+                if (minNo == Integer.parseInt(arr[i])) {
+                    count++;
                 }
             }
 
