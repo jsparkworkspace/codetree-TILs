@@ -15,9 +15,10 @@ public class Main {
 
         int max = -1;
 
-        for (int i = 0; i < e.length; i++) {
+        for (int i = e.length - 1; i >= 0; i--) {
             if (e[i] == 1) {
                 max = i + 1;
+                break;
             }
             
         }
