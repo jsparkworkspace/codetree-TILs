@@ -27,14 +27,11 @@ public class Main {
         if (index == arr.length - 1) {
             System.out.print(0);
         } else {
-        for (int i = index; i < n - 1; i++) {
-            if (arr[i] > arr[i+1]) {
+        for (int i = index; i < n; i++) {
+            if (max < arr[i]) {
                 max = arr[i];
-            } else {
-                max = arr[i+1];
-            }
+            } 
         }
-
         System.out.printf("%d", max - min);
         }
 
