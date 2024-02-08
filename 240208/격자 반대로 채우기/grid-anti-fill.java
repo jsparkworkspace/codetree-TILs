@@ -7,9 +7,10 @@ public class Main {
         int n = sc.nextInt();
         int[][] arr = new int[n][n];
         int num = 1;
+        int count = 1;
         for (int i = n-1; i >= 0; i--) {
 
-            if (i % 2 == 0) {
+            if (count % 2 == 0) {
                 for (int j = 0; j < n; j++) {
                     arr[j][i] = num++;
                     
@@ -19,6 +20,7 @@ public class Main {
                     arr[j][i] = num++;
                 }
             }
+            count++;
         }
 
         for (int i = 0; i < n; i++) {
