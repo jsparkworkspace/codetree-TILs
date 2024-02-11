@@ -12,9 +12,10 @@ public class Main {
                 max = str[i].length();
                 min = str[i].length();
             } else {
-                if (str[i-1].length() < str[i].length()) {
+                if (max < str[i].length()) {
                     max = str[i].length();
-                } else {
+                } 
+                if (min > str[i].length()) {
                     min = str[i].length();
                 }
             }
