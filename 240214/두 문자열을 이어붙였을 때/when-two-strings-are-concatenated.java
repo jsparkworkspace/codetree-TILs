@@ -11,7 +11,7 @@ public class Main {
         String str2 = b + a;
         boolean t = true;
         for (int i = 0; i < str.length(); i++) {
-            if (str.charAt(i) == str.charAt(i)) {
+            if (str.charAt(i) == str2.charAt(i)) {
                 continue;
             } else {
                 t = false;
