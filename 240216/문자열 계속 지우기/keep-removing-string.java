@@ -7,7 +7,7 @@ public class Main {
         String strA = sc.next();
         String strB = sc.next();
 
-        for (int i = 0; i < strA.length() -strB.length(); i++) {
+        for (;;) {
 
             int n = strA.indexOf(strB);
             if (n == -1) {
