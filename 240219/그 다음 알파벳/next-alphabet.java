@@ -4,7 +4,13 @@ public class Main {
         // 여기에 코드를 작성해주세요.
         Scanner sc = new Scanner(System.in);
 
-        System.out.printf("%c", (char) ((int)sc.next().charAt(0) + 1));
+        char c = sc.next().charAt(0);
+        if (c == 'z') {
+            c = 'a';
+        } else {
+            c = (char)((int) c + 1);
+        }
+        System.out.printf("%c", c);
 
         sc.close();
     }
