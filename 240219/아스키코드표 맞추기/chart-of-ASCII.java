@@ -5,8 +5,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         for (int i = 0; i < 5; i++) {
-            char c = (char) sc.nextInt();
-            System.out.printf("%c ", c);
+            System.out.printf("%c ", (char) sc.nextInt());
         }
 
         sc.close();
