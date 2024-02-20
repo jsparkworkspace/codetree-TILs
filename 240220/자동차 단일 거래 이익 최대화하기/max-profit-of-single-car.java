@@ -20,6 +20,8 @@ public class Main {
             }
         }
 
+        
+
         int max = arr[index];
         for (int i = index; i < arr.length; i++) {
             if (max < arr[i]) {
@@ -27,8 +29,12 @@ public class Main {
             }
         }
 
-        System.out.print(max - min);
-
+        if (index == arr.length - 1) {
+            System.out.print(0);
+        } else {
+            System.out.print(max - min);
+        }
+        
         sc.close();
     }
 }
