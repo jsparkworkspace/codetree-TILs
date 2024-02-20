@@ -28,6 +28,7 @@ public class Main {
                     tmp += a[j];
                 }
 
+                // 비교했을 때 같다면 true로 변경 후 반복 종료
                 if (str.equals(tmp)) {
                     stat = true;
                     break;
@@ -35,9 +36,9 @@ public class Main {
             }
 
             if (stat == true) {
-                System.out.print("Yes");
+                bw.write("Yes");
             } else {
-                System.out.print("No");
+                bw.write("No");
             }
 
         } catch (IOException e) {
