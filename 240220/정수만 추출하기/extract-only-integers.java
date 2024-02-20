@@ -18,7 +18,7 @@ public class Main {
 
         len = 0;
         for (int i = 0; i < str2.length(); i++) {
-            if (str1.charAt(i) >= '0' && str2.charAt(i) <= '9') {
+            if (str2.charAt(i) >= '0' && str2.charAt(i) <= '9') {
                 len++;
             } else {
                 break;
@@ -27,7 +27,7 @@ public class Main {
         int num2 = Integer.parseInt(str2.substring(0,len));
 
         System.out.print(num1 + num2);
-        
+
         sc.close();
     }
 }
