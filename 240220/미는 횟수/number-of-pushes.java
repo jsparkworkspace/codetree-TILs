@@ -9,7 +9,7 @@ public class Main {
         int cnt = 0;
 
         while (!str1.equals(str2)) {
-            str1 = str1.substring(1, str1.length()) + str1.substring(0,1);
+            str1 = str1.substring(str1.length() - 1) + str1.substring(0, str1.length() - 1);
             cnt++;
             if (cnt > str1.length()) {
                 cnt = -1;
