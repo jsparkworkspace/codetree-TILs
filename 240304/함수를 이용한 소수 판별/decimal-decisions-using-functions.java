@@ -7,6 +7,9 @@ public class Main {
         boolean isPrime = true;
         for (int i = a; i <= b; i++) {
             isPrime = true;
+            if (i == 1) {
+                continue;
+            }
             for (int j = 2; j < i; j++) {
                 if (i % j == 0) {
                     isPrime = false;
