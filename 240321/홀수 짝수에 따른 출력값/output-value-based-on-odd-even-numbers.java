@@ -5,10 +5,6 @@ public class Main {
         if (n == 1) return n;
         if (n == 2) return n;
 
-        if (n % 2 == 0) {
-            return compute(n - 2) + n;
-        }
-
         return compute(n - 2) + n;
     }
 
