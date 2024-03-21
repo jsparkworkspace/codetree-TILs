@@ -6,8 +6,8 @@ public class Main {
 
     public static int maxNum(int n) {
         if (n == 0) return arr[n]; 
-
-        return arr[n] > maxNum(n - 1) ? arr[n] : maxNum(n - 1); 
+        int tmp = maxNum(n - 1);
+        return arr[n] > tmp ? arr[n] : tmp; 
     }
 
     public static void main(String[] args) {
