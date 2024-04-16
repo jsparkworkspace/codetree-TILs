@@ -16,6 +16,10 @@ public class Main {
 
         Arrays.sort(arr);
 
+        // for (String s : arr) {
+        //     System.out.println(s);
+        // }
+
         int cnt = 0;
 
         for (int i = 0; i < n; i++) {
@@ -23,7 +27,7 @@ public class Main {
                 System.out.println(arr[i]);
                 break;
             }
-            if (arr[i].indexOf(str) != -1) {
+            if (arr[i].indexOf(str) == 0) {
                 cnt++;
             }
         }
