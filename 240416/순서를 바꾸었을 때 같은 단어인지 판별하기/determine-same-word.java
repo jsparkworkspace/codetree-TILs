@@ -14,7 +14,7 @@ public class Main {
         String str1 = new String(arr1);
         String str2 = new String(arr2);
 
-        if (str1.equals(arr2)) {
+        if (str1.equals(str2)) {
             System.out.println("Yes");
         } else {
             System.out.println("No");
