@@ -11,23 +11,15 @@ public class Main {
         Arrays.sort(arr1);
         Arrays.sort(arr2);
 
-        String str1 = "";
-        String str2 = "";
+        String str1 = new String(arr1);
+        String str2 = new String(arr2);
 
-        for (char c : arr1) {
-            str1 += (c + "");
-        }
-
-        for (char c : arr2) {
-            str2 += (c + "");
-        }
-
-        if (str1.equals(str2)) {
+        if (str1.equals(arr2)) {
             System.out.println("Yes");
         } else {
             System.out.println("No");
         }
-
+        
         sc.close();
     }
 }
