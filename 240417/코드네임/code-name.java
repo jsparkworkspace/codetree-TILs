@@ -15,7 +15,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         Agent[] agentList = new Agent[5];
 
-        int lowScore = 0;
+        int lowScore = 100;
         int index = 0;
         for (int i = 0; i < 5; i++) {
             char codeName = sc.next().charAt(0);
