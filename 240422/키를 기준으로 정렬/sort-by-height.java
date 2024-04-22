@@ -1,6 +1,5 @@
 import java.util.Scanner;
 import java.util.Arrays;
-import java.util.Comparator;
 
 class Student {
     String firstName;
@@ -30,13 +29,7 @@ public class Main {
             students[i] = new Student(firstName, height, weight);
         }
 
-        Arrays.sort(students, new Comparator<Student>() {
-            @Override
-            public int compare(Student a, Student b) {
-                return a.height - b.height;
-            }
-
-        });
+        Arrays.sort(students, (a, b) -> a.height - b.height);
 
         for (int i = 0; i < n; i++) {
             System.out.printf("%s %d %d\n", students[i].firstName, students[i].height, students[i].weight);
