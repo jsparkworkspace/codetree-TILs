@@ -1,8 +1,7 @@
 import java.util.Scanner;
 import java.util.Arrays;
-import java.util.Comparator;
 
-class Student {
+class Student implements Comparable<Student> {
     String name;
     int kor;
     int eng;
@@ -13,6 +12,17 @@ class Student {
         this.kor = kor;
         this.eng = eng;
         this.math = math;
+    }
+
+    @Override
+    public int compareTo(Student student) {
+        if (this.kor == student.kor) {
+            if (this.eng == student.eng) {
+                return student.math - this.math;
+            }
+            return student.eng - this.eng;
+        }
+        return student.kor - this.kor;
     }
 }
 
@@ -31,18 +41,7 @@ public class Main {
             students[i] = new Student(name, kor, eng, math);
         }
 
-        Arrays.sort(students, new Comparator<Student>() {
-            @Override
-            public int compare(Student a, Student b) {
-                if (a.kor == b.kor) {
-                    if (a.eng == b.eng) {
-                        return b.math - a.math;
-                    }
-                    return b.eng - a.eng;
-                }
-                return b.kor - a.kor;
-            }
-        });
+        Arrays.sort(students);
 
         for (int i = 0; i < n; i++) {
             System.out.printf("%s %d %d %d\n", students[i].name, students[i].kor, students[i].eng, students[i].math);
