@@ -1,7 +1,8 @@
 import java.util.Scanner;
 import java.util.Arrays;
+import java.util.Comparator;
 
-class Student implements Comparable<Student> {
+class Student {
     String name;
     int height;
     int weight;
@@ -12,11 +13,6 @@ class Student implements Comparable<Student> {
         this.weight = weight;
     }
 
-    @Override
-    public int compareTo(Student student) {
-        if (this.height != student.height) return this.height - student.height;
-        return student.weight - this.weight;
-    }
 }
 
 public class Main {
@@ -33,7 +29,13 @@ public class Main {
             students[i] = new Student(name, height, weight);
         }
 
-        Arrays.sort(students);
+        Arrays.sort(students, new Comparator<Student>() {
+            @Override
+            public int compare(Student a, Student b) {
+                if (a.height != b.height) return a.height - b.height;
+                return b.weight - a.weight;
+            }
+        });
 
         for (int i = 0; i < n; i++) {
             System.out.printf("%s %d %d\n", students[i].name, students[i].height, students[i].weight);
