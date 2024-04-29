@@ -14,24 +14,30 @@ public class Main {
         return totalDays;
     }
 
+    public static String printDay(int dayNum) {
+        String[] arr = new String[] {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
+
+        if (dayNum == 0) {
+            return arr[dayNum];
+        } else if (dayNum < 0) {
+            dayNum = 7 - (dayNum * -1) % 7;
+            return arr[1 + dayNum];
+        } else {
+            dayNum %= 7;
+            return arr[1 + dayNum];
+        }
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String[] arr = new String[] {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
+        
         int m1 = sc.nextInt();
         int d1 = sc.nextInt();
         int m2 = sc.nextInt();
         int d2 = sc.nextInt();
 
         int dayNum = days(m2, d2) - days(m1, d1);
-        if (dayNum < 0) {
-            dayNum *= -1;
-            dayNum %= 7;
-            System.out.println(arr[1 - dayNum]);
-        } else {
-            dayNum %= 7;
-            System.out.println(arr[1 + dayNum]);
-        }
-        
+        System.out.println((printDay(dayNum)));
         
 
         sc.close();
