@@ -15,16 +15,16 @@ public class Main {
     }
 
     public static String printDay(int dayNum) {
-        String[] arr = new String[] {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
+        String[] arr = new String[] {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"};
 
         if (dayNum == 0) {
             return arr[dayNum];
         } else if (dayNum < 0) {
             dayNum = 7 - (dayNum * -1) % 7;
-            return arr[1 + dayNum];
+            return arr[dayNum];
         } else {
             dayNum %= 7;
-            return arr[1 + dayNum];
+            return arr[dayNum];
         }
     }
 
