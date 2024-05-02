@@ -28,7 +28,7 @@ public class Main {
         }
 
         totalNum = d / 7;
-        if (d % 7 == index) totalNum++;
+        if (d % 7 >= index) totalNum++;
 
         return totalNum;
 
