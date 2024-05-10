@@ -15,7 +15,7 @@ public class Main {
             num = num * a + arr[i];
         }
 
-        int[] result = new int[10];
+        int[] result = new int[20];
         int index = 0;
         while (true) {
             if (num < b) {
