@@ -5,7 +5,11 @@ public class Main {
     static final int[] arr = new int[201];
 
     public static int offset(int num) {
-        num = num < 0 ? num + 100 : num;
+        if (num >= 0) {
+            num += 101;
+        } else {
+            num += 100;
+        }
         return num;
     }
 
