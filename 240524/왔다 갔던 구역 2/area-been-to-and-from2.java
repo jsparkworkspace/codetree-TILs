@@ -17,14 +17,14 @@ public class Main {
             if (str.equals("L")) {
                 x *= -1;
                 for (int j = index; j > index + x; j--) {
-                    arr[j]++;
-                    //System.out.printf("%d : %d\n", j, arr[j]);
+                    arr[j - 1]++;
+                    //System.out.printf("%d : %d, %d\n", j, arr[j], index);
                 }
                 index += x;
             } else {
                 for (int j = index; j < index + x; j++) {
                     arr[j]++;
-                    //System.out.printf("%d : %d\n", j, arr[j]);
+                    //System.out.printf("%d : %d, %d\n", j, arr[j], index);
                 }
                 index += x;
             }
@@ -33,8 +33,9 @@ public class Main {
         int cnt = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] > 1) cnt++;
+            //System.out.print(arr[i]);
         }
-
+        //System.out.println();
         System.out.print(cnt);
 
         sc.close();
